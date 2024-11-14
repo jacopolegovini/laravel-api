@@ -50,7 +50,7 @@
                                 {{ $project->description }}
                             </td>
                             <td>
-                                <a href="/admin/projects/{{ $index + 1 }}" class="btn btn-sm btn-primary me-2">Show</a>
+                                <a href="{{route('admin.projects.show', $project->id)}}" class="btn btn-sm btn-primary me-2">Show</a>
                                 <a href="{{ route("admin.projects.edit", $project->id) }}"  class="btn btn-sm btn-success me-2">Edit</a>
 
                                 <form class="d-inline env-destroyer" action="{{ route("admin.projects.delete", $project->id) }}" method="POST" custom-data-name="{{ $project->name }}" >
