@@ -19,7 +19,7 @@ class ProjectController extends Controller
 
     public function show(Project $project)
     {
-        $project = Project::with('user')->findOrFail($project->id);
+        $project = Project::findOrFail($project->id);
         return response()->json([
             "success" => true,
             "results" => $project,
